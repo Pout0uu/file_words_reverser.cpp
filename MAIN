@@ -1,0 +1,5 @@
+int main() {
+    reverse_order("text1.txt", "output.txt"); // Call the function to reverse the order of words in the file
+    system("notepad output.txt");
+    return 0;
+}
