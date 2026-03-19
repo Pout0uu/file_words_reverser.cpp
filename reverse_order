@@ -6,23 +6,23 @@
 using namespace std;
 
 
-void reverse_order(const string &file, const string &output_file) {
+void reverse_order(const string &file, const string &output_file) { // Function to reverse the order of words in a file
     ifstream infile(file);
     ofstream outfile(output_file);
     
-    if (!infile.is_open()) {
+    if (!infile.is_open()) { // Check if the file was opened successfully
         cerr << "Error opening file: " << file << endl;
         return;
     }
 
-    vector<string> words;
+    vector<string> words; // Vector to store the words from the file
     string word;
     while (infile >> word) {
         words.push_back(word);
         
     }
 
-    for (int i = words.size() - 1; i >= 0; --i) {
+    for (int i = words.size() - 1; i >= 0; --i) { // Write the words to the output file in reverse order
         outfile << words[i] << " ";
      }
     infile.close();
